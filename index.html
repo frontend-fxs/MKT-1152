@@ -44,6 +44,7 @@
                             <nav class="fxs_nav_menu fxs_main_nav" role="navigation">
                                 <ul>
                                     <li><a href="index.html">Exchange Listing Page</a></li>
+                                    <li><a href="index1.html">Exchange Listing Widget</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -262,6 +263,12 @@
                                     </script>
 
                                     <style>
+                                        .fxs_table.fxs_widget_spreads_table .fxs_btn {
+                                            white-space: nowrap;
+                                            font-size: 0.8rem;
+                                            padding: 0 5px;
+                                        }
+                                        
                                         .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td,
                                         .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th {
                                             display: none;
@@ -273,10 +280,6 @@
                                         .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th:last-child {
                                             display: table-cell;
                                         }
-                                        /*.fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(5),
-                                        .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th:nth-child(5) {
-                                            width: 17%;
-                                        }*/
                                         
                                         .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td {
                                             height: 85px;
@@ -309,18 +312,18 @@
                                         }
                                         
                                         .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(2) {
-                                            /*width: 85px;*/
+                                            width: 220px;
                                             padding: 10px;
                                             vertical-align: middle;
                                         }
                                         
                                         .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(2) a {
                                             display: block;
-                                            /*width: 60px;*/
+                                            width: 200px;
                                         }
                                         
                                         .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(2) a img {
-                                            width: 100px;
+                                            width: 200px;
                                         }
                                         
                                         .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:last-child {
@@ -349,39 +352,46 @@
                                             }
                                             .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(1),
                                             .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th:nth-child(1),
+                                            {
+                                                display: table-cell;
+                                            }
+                                        }
+                                        
+                                        @media(min-width:680px) {
                                             .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(3),
                                             .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th:nth-child(3) {
                                                 display: table-cell;
                                             }
                                         }
                                         
-                                        @media(min-width:768px) {
-                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td,
-                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th {
+                                        @media(min-width:920px) {
+                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(4),
+                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(6),
+                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th:nth-child(4),
+                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th:nth-child(6) {
+                                                width: 20%;
                                                 display: table-cell;
                                             }
+                                        }
+                                        
+                                        @media(min-width:1024px) {
                                             .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:last-child {
                                                 padding: 1.5px 10px;
                                                 width: 15%;
                                                 vertical-align: top;
                                             }
-                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td {
-                                                padding: 10px;
-                                            }
-                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:first-child span {
-                                                width: 75px;
-                                                top: 30px;
-                                                left: -12px;
-                                            }
-                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(2) {
-                                                /*width: 80px;*/
-                                            }
                                             .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(2) a {
                                                 display: block;
-                                                /*width: 75px;*/
                                             }
-                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td:nth-child(2) a img {
-                                                /*width: 75px;*/
+                                        }
+                                        
+                                        @media(min-width:1480px) {
+                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td,
+                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing thead>tr>th {
+                                                display: table-cell;
+                                            }
+                                            .fxs_table.fxs_widget_spreads_table.fxs_widget_nopairs.fxs_exchange_listing tbody>tr>td {
+                                                padding: 10px;
                                             }
                                         }
                                     </style>
@@ -416,7 +426,7 @@
                                                             </a>
                                                         </td>
                                                         <td>
-                                                            <a href="{{WebsiteURL}}" alt="{{Translations.Website}}" target="_blank" data-gtmid="exchange-image">
+                                                            <a href="{{WebsiteURL}}" alt="{{Translations.Website}}" target="_blank" data-gtmid="exchange-name" class="fxs_txt_dark_4">
                                                                         {{name}}
                                                                     </a>
                                                         </td>
@@ -443,7 +453,7 @@
                                                             </a>
                                                         </td>
                                                         <td>
-                                                            <a href="{{WebsiteURL}}" alt="{{Translations.Website}}" target="_blank" data-gtmid="exchange-image">
+                                                            <a href="{{WebsiteURL}}" alt="{{Translations.Website}}" target="_blank" data-gtmid="exchange-name" class="fxs_txt_dark_4">
                                                                             {{name}}
                                                                         </a>
                                                         </td>
