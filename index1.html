@@ -91,14 +91,6 @@
                                             white-space: nowrap;
                                         }
                                         
-                                        .fxs_widget_exchange_listing.fxs_table>tbody>tr>td.fxs_hidden_table_xs {
-                                            display: none;
-                                        }
-                                        
-                                        .fxs_widget_exchange_listing.fxs_table>tbody>tr>td.fxs_hidden_table_xxs {
-                                            display: none;
-                                        }
-                                        
                                         .fxs_widget_exchange_listing.fxs_table>tbody>tr>th {
                                             text-align: center;
                                             white-space: nowrap;
@@ -130,19 +122,10 @@
                                             text-align: left;
                                         }
                                         
-                                        .fxs_widget_exchange_listing.fxs_table>thead>tr>th.fxs_hidden_table_m {
-                                            display: none;
-                                        }
-                                        
-                                        .fxs_widget_exchange_listing.fxs_table>thead>tr>th.fxs_hidden_table_s {
-                                            display: none;
-                                        }
-                                        
-                                        .fxs_widget_exchange_listing.fxs_table>thead>tr>th.fxs_hidden_table_xs {
-                                            display: none;
-                                        }
-                                        
-                                        .fxs_widget_exchange_listing.fxs_table>thead>tr>th.fxs_hidden_table_xxs {
+                                        .fxs_widget_exchange_listing.fxs_table .fxs_hidden_table_m,
+                                        .fxs_widget_exchange_listing.fxs_table .fxs_hidden_table_s,
+                                        .fxs_widget_exchange_listing.fxs_table .fxs_hidden_table_xs,
+                                        .fxs_widget_exchange_listing.fxs_table .fxs_hidden_table_xxs {
                                             display: none;
                                         }
                                         
@@ -160,11 +143,7 @@
                                             width: 110px;
                                         }
                                         
-                                        .fxs_widget_exchange_listing.fxs_table .fxs_min_buy {
-                                            display: none;
-                                        }
-                                        
-                                        .fxs_widget_exchange_listing.fxs_table .fxs_payment_method {
+                                        .fxs_widget_exchange_listing.fxs_table .fxs_deposit {
                                             width: 60px;
                                         }
                                         
@@ -178,41 +157,41 @@
                                             border-bottom: 1px solid #8C8D91;
                                         }
                                         
+                                        @media (min-width: 425px) {
+                                            .fxs_widget_exchange_listing.fxs_table .fxs_hidden_table_xxs {
+                                                display: table-cell;
+                                            }
+                                        }
+                                        
                                         @media (min-width: 540px) {
                                             .fxs_widget_exchange_listing.fxs_table .fxs_btn {
                                                 white-space: nowrap;
                                                 font-size: 0.92rem;
                                                 padding: 0 1rem;
                                             }
-                                            .fxs_widget_exchange_listing.fxs_table>tbody>tr>td.fxs_hidden_table_xxs {
-                                                display: table-cell;
-                                            }
                                         }
                                         
                                         @media (min-width: 680px) {
-                                            .fxs_widget_exchange_listing.fxs_table>thead>tr>th.fxs_hidden_table_xs {
+                                            .fxs_widget_exchange_listing.fxs_table .fxs_hidden_table_xs {
                                                 display: table-cell;
                                             }
                                         }
                                         
                                         @media (min-width: 768px) {
-                                            .fxs_widget_exchange_listing.fxs_table>thead>tr>th.fxs_hidden_table_s {
+                                            .fxs_widget_exchange_listing.fxs_table .fxs_hidden_table_s {
                                                 display: table-cell;
                                             }
                                             .fxs_widget_exchange_listing.fxs_table>tbody>tr>td .fa {
                                                 width: 20px;
                                                 margin: 0 5px;
                                             }
-                                            .fxs_widget_exchange_listing.fxs_table .fxs_payment_method {
+                                            .fxs_widget_exchange_listing.fxs_table .fxs_deposit {
                                                 width: 100px;
                                             }
                                         }
                                         
                                         @media (min-width: 1024px) {
-                                            .fxs_widget_exchange_listing.fxs_table>thead>tr>th.fxs_hidden_table_m {
-                                                display: table-cell;
-                                            }
-                                            .fxs_widget_exchange_listing.fxs_table .fxs_min_buy {
+                                            .fxs_widget_exchange_listing.fxs_table .fxs_hidden_table_m {
                                                 display: table-cell;
                                             }
                                         }
@@ -234,7 +213,7 @@
                                                     monero: false,
                                                     lastImage: true
                                                 },
-                                                paymenMethods: {
+                                                paymentMethods: {
                                                     creditCard: true,
                                                     btc: false
                                                 },
@@ -255,7 +234,7 @@
                                                     monero: false,
                                                     lastImage: true
                                                 },
-                                                paymenMethods: {
+                                                paymentMethods: {
                                                     creditCard: false,
                                                     btc: true
                                                 },
@@ -276,7 +255,7 @@
                                                     monero: true,
                                                     lastImage: true
                                                 },
-                                                paymenMethods: {
+                                                paymentMethods: {
                                                     creditCard: true,
                                                     btc: true
                                                 },
@@ -297,7 +276,7 @@
                                                     monero: false,
                                                     lastImage: true
                                                 },
-                                                paymenMethods: {
+                                                paymentMethods: {
                                                     creditCard: true,
                                                     btc: true
                                                 },
@@ -318,7 +297,7 @@
                                                     monero: false,
                                                     lastImage: true
                                                 },
-                                                paymenMethods: {
+                                                paymentMethods: {
                                                     creditCard: false,
                                                     btc: true
                                                 },
@@ -328,7 +307,7 @@
                                             Translations: {
                                                 exchange: 'EXCHANGE',
                                                 cryptos: 'CRYPTOS',
-                                                payment: 'PAYMENT',
+                                                deposit: 'deposit',
                                                 promo: 'PROMO',
                                                 exchangeListing: 'See complete EXCHANGE LISTING',
                                                 openAccount: 'Open Account',
@@ -343,22 +322,12 @@
                                             <table class="fxs_table fxs_widget_exchange_listing">
                                                 <thead>
                                                     <tr>
-                                                        <th class="fxs_broker_logo">
-                                                            {{Translations.exchange}}
-                                                        </th>
-                                                        <th class="fxs_hidden_table_xs">&nbsp;</th>
-                                                        <th>
-                                                            {{Translations.cryptos}}
-                                                        </th>
-                                                        <th class="fxs_payment_method fxs_hidden_table_xs">
-                                                            {{Translations.payment}}
-                                                        </th>
-                                                        <th class="fxs_hidden_table_xxs">
-                                                            {{Translations.promo}}
-                                                        </th>
-                                                        <th colspan="2"> <a href="index.html"> 
-                                                            {{Translations.exchangeListing}}
-                                                        </a> </th>
+                                                        <th class="fxs_broker_logo"> {{Translations.exchange}} </th>
+                                                        <th class="fxs_hidden_table_xxs"></th>
+                                                        <th class="fxs_hidden_table_s"> {{Translations.cryptos}} </th>
+                                                        <th class="fxs_deposit fxs_hidden_table_xs"> {{Translations.deposit}} </th>
+                                                        <th class="fxs_hidden_table_m"> {{Translations.promo}} </th>
+                                                        <th colspan="2"> <a href="index.html"> {{Translations.exchangeListing}} </a> </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -369,60 +338,25 @@
                                                         <td class="fxs_broker_logo">
                                                             <a target="_blank" href="{{url}}"> <img src="{{logoUrl}}" width="100" height="35"> </a>
                                                         </td>
-                                                        <td class="fxs_broker_name"> <a target="_blank" href="{{url}}" class="fxs_txt_dark_4">{{name}}</a></td>
-                                                        <td class="fxs_logos_cryptos fxs_hidden_table_m">
-                                                            {{#cryptos.bitcoin}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin.svg" alt="" width="20"> {{/cryptos.bitcoin}} {{#cryptos.litecoin}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/litecoin.svg" alt="" width="20"> {{/cryptos.litecoin}} {{#cryptos.ethereum}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/ethereum.svg" alt="" width="20"> {{/cryptos.ethereum}} {{#cryptos.dash}}
-
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/dash.svg" alt="" width="20"> {{/cryptos.dash}} {{#cryptos.ripple}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/ripple.svg" alt="" width="20"> {{/cryptos.ripple}} {{#cryptos.bitcoincash}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin-cash.svg" alt="" width="20"> {{/cryptos.bitcoincash}} {{#cryptos.monero}}
-
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/monero.svg" alt="" width="20"> {{/cryptos.monero}} {{#cryptos.lastImage}}
-                                                            <span class="last_img"> ... </span> {{/cryptos.lastImage}}
-
+                                                        <td class="fxs_broker_name fxs_hidden_table_xxs"> <a target="_blank" href="{{url}}" class="fxs_txt_dark_4">{{name}}</a></td>
+                                                        <td class="fxs_logos_cryptos fxs_hidden_table_s"> {{#cryptos.bitcoin}} <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin.svg" alt="" width="20"> {{/cryptos.bitcoin}} {{#cryptos.litecoin}} <img src="https://editorial.fxstreet.com/images-input/Others/litecoin.svg"
+                                                                alt="" width="20"> {{/cryptos.litecoin}} {{#cryptos.ethereum}} <img src="https://editorial.fxstreet.com/images-input/Others/ethereum.svg" alt="" width="20"> {{/cryptos.ethereum}} {{#cryptos.dash}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/dash.svg" alt="" width="20"> {{/cryptos.dash}} {{#cryptos.ripple}} <img src="https://editorial.fxstreet.com/images-input/Others/ripple.svg"
+                                                                alt="" width="20"> {{/cryptos.ripple}} {{#cryptos.bitcoincash}} <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin-cash.svg" alt="" width="20"> {{/cryptos.bitcoincash}} {{#cryptos.monero}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/monero.svg" alt="" width="20"> {{/cryptos.monero}} {{#cryptos.lastImage}} <span class="last_img"> ... </span> {{/cryptos.lastImage}}
                                                         </td>
-                                                        <td class="fxs_payment_method fxs_hidden_table_s> 
-                                                            {{#paymenMethods.creditCard}}
-                                                             <span title=" Credit Card " class="fa fa-credit-card " aria-hidden="true "></span> 
-                                                            {{/paymenMethods.creditCard}}
-                                                             
-                                                            {{#paymenMethods.btc}}
-                                                             <span title="Cryptos " class="fa fa-btc "  aria-hidden="true "></span>      
-                                                            {{/paymenMethods.btc}}
-                                                                                                                  
-                                                         </td>
-                                                        <td class="fxs_hidden_table_m "> 
-                                                            {{promo}}
-                                                         </td>
-                                                        <td> <a target="_blank " href=" {{url}} " class="fxs_btn fxs_btn_cta fxs_btn_small " role="button "> 
-                                                            {{Translations.openAccount}}
-                                                        </a> </td>
-                                                        <td>
-                                                            
-                                                            {{#premium}}
-                                                            
-                                                            <a href=" {{reviewUrl}} " class="fxs_btn_icon " title=" {{Translations.readReview}} "> <span class="fa fa-file-text "></span> <span class="fxs_skip "> 
-                                                                {{Translations.readReview}}
-                                                            </span> </a>
-                                                            
-                                                            {{/premium}}
-                                                             
-                                                            {{^premium}}
-                                                            
-                                                            <a target="_blank " href=" {{url}} " class="fxs_btn_icon " title=" {{Translations.openAccount}} "> <span class="fa fa-angle-double-right "></span> <span class="fxs_skip "> 
-                                                                {{Translations.openAccount}}
-                                                            </span> </a>
-                                                            
-                                                            {{/premium}}
-                                                            
-                                                        </td>
-                                                    </tr> 
-                                                    
+                                                        <td class="fxs_deposit fxs_hidden_table_xs"> {{#paymentMethods.creditCard}} <span title=" Credit Card " class="fa fa-credit-card " aria-hidden="true "></span> {{/paymentMethods.creditCard}} {{#paymentMethods.btc}} <span title="Cryptos " class="fa fa-btc "
+                                                                aria-hidden="true "></span> {{/paymentMethods.btc}} </td>
+                                                        <td class="fxs_hidden_table_m "> {{promo}} </td>
+                                                        <td> <a target="_blank " href=" {{url}} " class="fxs_btn fxs_btn_cta fxs_btn_small " role="button "> {{Translations.openAccount}} </a> </td>
+                                                        <td> {{#premium}}
+                                                            <a href=" {{reviewUrl}} " class="fxs_btn_icon " title=" {{Translations.readReview}} "> <span class="fa fa-file-text "></span> <span class="fxs_skip "> {{Translations.readReview}} </span> </a> {{/premium}} {{^premium}}
+                                                            <a target="_blank " href=" {{url}} " class="fxs_btn_icon " title=" {{Translations.openAccount}} ">
+                                                                <span class="fa fa-angle-double-right "></span> <span class="fxs_skip "> {{Translations.openAccount}} </span> </a> {{/premium}} </td>
+                                                    </tr>
+
                                                     {{/Exchanges}}
-                                                     
+
                                                 </tbody>
                                             </table>
                                         </div>
