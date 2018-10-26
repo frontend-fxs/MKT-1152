@@ -130,11 +130,7 @@
                                             padding: 0 5px;
                                         }
                                         
-                                        .fxs_widget_exchange_listing .last_img {
-                                            white-space: nowrap;
-                                        }
-                                        
-                                        @media(min-width:540px) {
+                                        F @media(min-width:540px) {
                                             .fxs_widget_exchange_listing .fxs_btn {
                                                 white-space: nowrap;
                                                 font-size: 0.92rem;
@@ -202,6 +198,10 @@
                                             }
                                         }
                                         
+                                        .fxs_widget_exchange_listing.fxs_table>tbody>tr>td.fxs_logos_cryptos {
+                                            white-space: nowrap;
+                                        }
+                                        
                                         .fxs_widget_exchange_listing.fxs_table>tbody>tr>td.fxs_logos_cryptos img {
                                             width: 20px;
                                             height: 20px;
@@ -259,7 +259,8 @@
                                                     dash: true,
                                                     ripple: true,
                                                     bitcoincash: true,
-                                                    lastImage: false
+                                                    monero: false,
+                                                    lastImage: true
 
                                                 },
                                                 paymenMethods: {
@@ -280,6 +281,7 @@
                                                     dash: true,
                                                     ripple: true,
                                                     bitcoincash: false,
+                                                    monero: false,
                                                     lastImage: true
                                                 },
                                                 paymenMethods: {
@@ -290,9 +292,9 @@
                                                 openAccountUrl: 'http://pubads.g.doubleclick.net/gampad/clk?id=4733432349&iu=/7138/FXS30',
                                             }, {
                                                 premium: false,
-                                                name: 'Binance',
-                                                url: 'http://pubads.g.doubleclick.net/gampad/clk?id=4733432349&iu=/7138/FXS30',
-                                                logoUrl: 'https://editorial.azureedge.net/brokers/Binance_Gran_Spreads.png',
+                                                name: 'Changelly',
+                                                url: 'http://pubads.g.doubleclick.net/gampad/clk?id=4733186293&iu=/7138/FXS30',
+                                                logoUrl: 'https://editorial.blob.core.windows.net/brokers/Changelly-Gran-Spreads.png',
                                                 cryptos: {
                                                     bitcoin: true,
                                                     litecoin: true,
@@ -300,14 +302,57 @@
                                                     dash: true,
                                                     ripple: true,
                                                     bitcoincash: false,
+                                                    monero: true,
+                                                    lastImage: true
+                                                },
+                                                paymenMethods: {
+                                                    creditCard: true,
+                                                    btc: true
+                                                },
+                                                promo: 'Exchange cryptos at the best rate',
+                                                openAccountUrl: 'http://pubads.g.doubleclick.net/gampad/clk?id=4733186293&iu=/7138/FXS30',
+                                            }, {
+                                                premium: false,
+                                                name: 'Cex IO',
+                                                url: 'http://pubads.g.doubleclick.net/gampad/clk?id=4733171656&iu=/7138/FXS30',
+                                                logoUrl: 'https://editorial.azureedge.net/brokers/Cexio_Gran_Spreads.png',
+                                                cryptos: {
+                                                    bitcoin: true,
+                                                    litecoin: true,
+                                                    ethereum: true,
+                                                    dash: true,
+                                                    ripple: true,
+                                                    bitcoincash: true,
+                                                    monero: false,
+                                                    lastImage: true
+                                                },
+                                                paymenMethods: {
+                                                    creditCard: true,
+                                                    btc: true
+                                                },
+                                                promo: 'Bitcoin Exchange you can trust',
+                                                openAccountUrl: 'http://pubads.g.doubleclick.net/gampad/clk?id=4733171656&iu=/7138/FXS30',
+                                            }, {
+                                                premium: false,
+                                                name: 'Bitmex',
+                                                url: 'http://pubads.g.doubleclick.net/gampad/clk?id=4770372175&iu=/7138/FXS30',
+                                                logoUrl: 'https://editorial.blob.core.windows.net/brokers/Bitmex_Gran_Spreads.png',
+                                                cryptos: {
+                                                    bitcoin: true,
+                                                    litecoin: true,
+                                                    ethereum: true,
+                                                    dash: false,
+                                                    ripple: true,
+                                                    bitcoincash: false,
+                                                    monero: false,
                                                     lastImage: true
                                                 },
                                                 paymenMethods: {
                                                     creditCard: false,
                                                     btc: true
                                                 },
-                                                promo: 'Exchange the world with Binance',
-                                                openAccountUrl: 'http://pubads.g.doubleclick.net/gampad/clk?id=4733432349&iu=/7138/FXS30',
+                                                promo: 'Access Global Markets only using Bitcoin',
+                                                openAccountUrl: 'http://pubads.g.doubleclick.net/gampad/clk?id=4770372175&iu=/7138/FXS30',
                                             }],
                                             Translations: {
                                                 exchange: 'EXCHANGE',
@@ -333,13 +378,18 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th class="fxs_broker_logo">{{Translations.exchange}}</th>
+                                                        <th class="fxs_broker_logo">
+                                                            {{Translations.exchange}}</th>
                                                         <th class="fxs_hidden_table_xs">&nbsp;</th>
-                                                        <th>{{Translations.cryptos}}</th>
-                                                        <th class="fxs_payment_method fxs_hidden_table_xs">{{Translations.payment}}</th>
-                                                        <th class="fxs_hidden_table_xxs">{{Translations.promo}}</th>
+                                                        <th>
+                                                            {{Translations.cryptos}}</th>
+                                                        <th class="fxs_payment_method fxs_hidden_table_xs">
+                                                            {{Translations.payment}}</th>
+                                                        <th class="fxs_hidden_table_xxs">
+                                                            {{Translations.promo}}</th>
                                                         <th colspan="2">
-                                                            <a href="index.html">{{Translations.exchangeListing}}</a>
+                                                            <a href="index.html">
+                                                                {{Translations.exchangeListing}}</a>
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -347,7 +397,8 @@
                                                     {{#Exchanges}}
                                                     <tr class="fxs_sponsored_broker_row {{#premium}}premium{{/premium}}" data-gtmid="exchange-listing-{{name}}">
                                                         <td>
-                                                            {{#premium}}<span class="fxs_bg_highlight_clr fxs_txt_lightest_clr">{{Translations.premium}}</span>{{/premium}}
+                                                            {{#premium}}<span class="fxs_bg_highlight_clr fxs_txt_lightest_clr">
+                                                                {{Translations.premium}}</span> {{/premium}}
                                                         </td>
                                                         <td class="fxs_broker_logo">
                                                             <a target="_blank" href="{{url}}">
@@ -359,27 +410,30 @@
                                                         </td>
                                                         <td class="fxs_logos_cryptos">
                                                             {{#cryptos.bitcoin}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin.svg" alt="" width="20">{{/cryptos.bitcoin}} {{#cryptos.litecoin}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/litecoin.svg" alt="" width="20">{{/cryptos.litecoin}} {{#cryptos.ethereum}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/ethereum.svg" alt="" width="20">{{/cryptos.ethereum}} {{#cryptos.dash}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/dash.svg" alt="" width="20">{{/cryptos.dash}} {{#cryptos.ripple}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/ripple.svg" alt="" width="20">{{/cryptos.ripple}} {{#cryptos.bitcoincash}}
-                                                            <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin-cash.svg" alt="" width="20">{{/cryptos.bitcoincash}}{{#cryptos.lastImage}}
-                                                            <span class="last_img"> <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin-cash.svg" alt="" width="20"> ... </span>{{/cryptos.lastImage}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin.svg" alt="" width="20"> {{/cryptos.bitcoin}} {{#cryptos.litecoin}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/litecoin.svg" alt="" width="20"> {{/cryptos.litecoin}} {{#cryptos.ethereum}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/ethereum.svg" alt="" width="20"> {{/cryptos.ethereum}} {{#cryptos.dash}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/dash.svg" alt="" width="20"> {{/cryptos.dash}} {{#cryptos.ripple}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/ripple.svg" alt="" width="20"> {{/cryptos.ripple}} {{#cryptos.bitcoincash}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/bitcoin-cash.svg" alt="" width="20"> {{/cryptos.bitcoincash}} {{#cryptos.monero}}
+                                                            <img src="https://editorial.fxstreet.com/images-input/Others/monero.svg" alt="" width="20"> {{/cryptos.monero}} {{#cryptos.lastImage}}
+                                                            <span class="last_img"> ... </span> {{/cryptos.lastImage}}
                                                         </td>
                                                         <td class="fxs_payment_method fxs_hidden_table_xs">
                                                             {{#paymenMethods.creditCard}}
                                                             <span title="Credit Card" class="fa fa-credit-card" aria-hidden="true"></span> {{/paymenMethods.creditCard}} {{#paymenMethods.btc}}
-                                                            <span title="Cryptos" class="fa fa-btc"></span>{{/paymenMethods.btc}}
+                                                            <span title="Cryptos" class="fa fa-btc"></span> {{/paymenMethods.btc}}
                                                         </td>
                                                         <td class="fxs_hidden_table_xxs"> {{promo}} </td>
                                                         <td>
-                                                            <a target="_blank" href="{{url}}" class="fxs_btn fxs_btn_cta fxs_btn_small" role="button">{{Translations.openAccount}}</a>
+                                                            <a target="_blank" href="{{url}}" class="fxs_btn fxs_btn_cta fxs_btn_small" role="button">
+                                                                {{Translations.openAccount}}</a>
                                                         </td>
                                                         <td>
                                                             <a target="_blank" href="{{openAccountUrl}}" class="fxs_btn_icon" title="{{Translations.openAccount}}">
                                                                 <span class="fa fa-angle-double-right"></span>
-                                                                <span class="fxs_skip">{{Translations.openAccount}}</span>
+                                                                <span class="fxs_skip">
+                                                                    {{Translations.openAccount}}</span>
                                                             </a>
                                                         </td>
                                                     </tr>
